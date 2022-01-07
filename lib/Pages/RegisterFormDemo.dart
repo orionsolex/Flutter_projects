@@ -8,13 +8,12 @@ class RegisterFormDemo extends StatefulWidget {
 
 class _RegisterFormState extends State<RegisterFormDemo> {
   bool _hidePass = true;
-  final _nameController=TextEditingController();
-  final _phoneController=TextEditingController();
-  final _emailController=TextEditingController();
-  final _storyController=TextEditingController();
-  final _passController=TextEditingController();
-  final _confirmPassController=TextEditingController();
-
+  final _nameController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _storyController = TextEditingController();
+  final _passController = TextEditingController();
+  final _confirmPassController = TextEditingController();
 
   @override
   void dispose() {
@@ -159,7 +158,7 @@ class _RegisterFormState extends State<RegisterFormDemo> {
     );
   }
 
-  void _submitForm(){
+  void _submitForm() {
     print('Name: ${_nameController.text}');
     print('Phone: ${_phoneController.text}');
     print('Email: ${_emailController.text}');
