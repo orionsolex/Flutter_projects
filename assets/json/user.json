@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "first_name": "Konstantin",
+      "last_name": "Ivanov",
+      "age": "23"
+    },
+    {
+      "first_name": "Sergey",
+      "last_name": "Peetrov",
+      "age": "26"
+    },
+    {
+      "first_name": "Uriy",
+      "last_name": "levko",
+      "age": "30"
+    },
+    {
+      "first_name": "Kirill",
+      "last_name": "Kokorin",
+      "age": "18"
+    }
+  ]
+}
