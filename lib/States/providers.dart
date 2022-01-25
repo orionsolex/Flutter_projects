@@ -124,8 +124,7 @@ class MyUserPage extends StatelessWidget {
 class MyCountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    CountProvider _state = Provider.of<CountProvider>(
-        context); //изменение состояния через ChangeNotifierProvider
+    CountProvider _state = Provider.of<CountProvider>(context); //изменение состояния через ChangeNotifierProvider
     return Scaffold(
       body: Center(
         child: Column(
@@ -207,7 +206,7 @@ class UserList {
 
 // FutureProvider
 class UserProvider {
-  final String _dataPath = "assets/user.json";
+  final String _dataPath = "assets/json/user.json";
   late List<User> users;
 
   Future<String> loadAssets() async {
