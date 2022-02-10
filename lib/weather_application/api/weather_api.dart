@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
-import 'package:flutter_projects/wearher_application/model/WeatherForecastDaily.dart';
-import 'package:flutter_projects/wearher_application/utilities/constants.dart';
+import 'package:flutter_projects/weather_application/model/WeatherForecastDaily.dart';
+import 'package:flutter_projects/weather_application/utilities/constants.dart';
 
 class WeatherApi{
 Future<WeatherForecast> fetchWeatherForecastByCity(String cityName) async{
   var queryParameters={
     'APPID':Constants.WEATHER_APP_ID,
-    'units':'metrics',
+    'units':'metric',
     'q':cityName,
   };
   
