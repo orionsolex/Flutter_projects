@@ -20,14 +20,14 @@ class WeatherForecastScreen extends StatefulWidget {
 
 class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
   late Future<WeatherForecast> forecastObject;
-  String _cityName = 'Moscow';
+  late String _cityName;
   String weather = '';
 
   @override
   void initState() {
     super.initState();
     if(widget.locationWeather!=null){
-      forecastObject = WeatherApi().fetchWeatherForecast();
+      forecastObject =  Future.value(widget.locationWeather);//приводим к типу Future
     }
 
     // forecastObject.then((value) {
@@ -41,6 +41,7 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,//убирает стрелку назад у AppBar
         title: Text("Weather app"),
         centerTitle: true,
         leading: IconButton(
@@ -98,10 +99,7 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
                   );
                 } else {
                   return Center(
-                    child: SpinKitDoubleBounce(
-                      color: Colors.black,
-                      size: 100.0,
-                    ),
+                    child: Text('City not found\nPlease, enter correct city',style: TextStyle(fontSize: 25,),textAlign: TextAlign.center,)
                   );
                 }
               },

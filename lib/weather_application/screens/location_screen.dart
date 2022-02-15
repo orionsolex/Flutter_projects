@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/weather_application/api/weather_api.dart';
 import 'package:flutter_projects/weather_application/screens/weatherforecastSreen.dart';
@@ -11,18 +13,16 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
-
-  void getLocationData() async{
-  var weatherInfo=await WeatherApi().fetchWeatherForecast();
-
-  if(weatherInfo==null){
-    print('Weather was null: $weatherInfo');
-    return;
-  }
-
-  Navigator.push(context, MaterialPageRoute(builder: (context){
-    return WeatherForecastScreen(locationWeather: weatherInfo,);
-  }));
+  void getLocationData() async {
+    try {
+      var weatherInfo = await WeatherApi().fetchWeatherForecast();
+      Navigator.push(context, MaterialPageRoute(builder: (context) {
+        return WeatherForecastScreen(
+          locationWeather: weatherInfo,
+        );
+      }));
+    } catch (e) {}
+    print('$e');
   }
 
   @override
@@ -36,7 +36,8 @@ class _LocationScreenState extends State<LocationScreen> {
     return Scaffold(
       body: Center(
         child: SpinKitDoubleBounce(
-          color: Colors.black87,size: 100.0,
+          color: Colors.black87,
+          size: 100.0,
         ),
       ),
     );

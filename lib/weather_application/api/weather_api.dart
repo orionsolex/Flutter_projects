@@ -41,7 +41,7 @@ if(isCity==true){
   if(response.statusCode==200){
     return WeatherForecast.fromJson(json.decode(response.body));
   }else{
-    throw Exception('Error response');
+    return Future.error('Error response');
   }
 }
 }
