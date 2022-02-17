@@ -6,7 +6,6 @@ import 'package:flutter_projects/weather_application/widgets/city_view.dart';
 import 'package:flutter_projects/weather_application/widgets/daily_forecast.dart';
 import 'package:flutter_projects/weather_application/widgets/detail_view.dart';
 import 'package:flutter_projects/weather_application/widgets/temp_view.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class WeatherForecastScreen extends StatefulWidget {
   final locationWeather;
