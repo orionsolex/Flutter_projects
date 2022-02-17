@@ -20,13 +20,13 @@ class _CityScreenState extends State<CityScreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: TextField(
-                    cursorColor: Colors.blueGrey[800],
+                    cursorColor: Colors.black87,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: 'Enter City Name',
                       hintStyle: TextStyle(color: Colors.white),
                       filled: true,
-                      fillColor: Colors.black87,
+                      fillColor: Colors.black54,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           borderSide: BorderSide.none),
@@ -44,7 +44,7 @@ class _CityScreenState extends State<CityScreen> {
               TextButton(
                 child: Text(
                   'Get Weather',
-                  style: TextStyle(fontSize: 30.0),
+                  style: TextStyle(fontSize: 30.0,color: Colors.black),
                 ),
                 onPressed: () {
                   Navigator.pop(context,cityName);

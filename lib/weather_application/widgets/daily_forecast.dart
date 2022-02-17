@@ -31,7 +31,7 @@ class ButtonListView extends StatelessWidget {
               itemBuilder: (context,index)=>Container(
                 width: MediaQuery.of(context).size.width/2.7,
                 height: 160,
-                color: Colors.black87,
+                color: Colors.blueAccent,
                 child: ForecastCard(snapshot,index),
               ),
               separatorBuilder: (context,index)=>SizedBox(width: 8,),
