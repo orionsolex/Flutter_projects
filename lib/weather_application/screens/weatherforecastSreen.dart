@@ -18,7 +18,7 @@ class WeatherForecastScreen extends StatefulWidget {
 
 class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
   late Future<WeatherForecast> forecastObject;
-  late String _cityName='Dublin';
+  late String _cityName;
   String weather = '';
 
   @override
@@ -39,7 +39,7 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        //automaticallyImplyLeading: false,
+        automaticallyImplyLeading: false,
         title: Text("Weather app"),
         centerTitle: true,
         leading: IconButton(
